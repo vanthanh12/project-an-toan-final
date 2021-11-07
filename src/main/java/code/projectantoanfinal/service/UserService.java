@@ -22,6 +22,7 @@ public class UserService  implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) {
         // Kiểm tra xem user có tồn tại trong database không?
         User user = userRepository.findByUsername(username);
+        
         if (user == null) {
             throw new UsernameNotFoundException(username);
         }

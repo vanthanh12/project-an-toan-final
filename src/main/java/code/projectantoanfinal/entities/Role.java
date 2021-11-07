@@ -5,6 +5,12 @@ import javax.persistence.*;
 @Entity
 @Table(name = "roles")
 public class Role {
+
+    public Role(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    
     @Id
     @Column(name = "role_id")
     @GeneratedValue
