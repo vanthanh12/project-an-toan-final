@@ -10,13 +10,17 @@ public class HelloWorldController {
 
     @RequestMapping("/")
     public String index(Model model) {
-
         return "index";
     }
 
     @RequestMapping("/home")
     public String homepage() {
         return "home"; // Trả về home.html
+    }
+
+    @RequestMapping("login")
+    public String loginPage(){
+        return "login";
     }
 
     @RequestMapping("/hello")

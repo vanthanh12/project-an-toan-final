@@ -15,7 +15,6 @@ import code.projectantoanfinal.repository.UserRepository;
 import code.projectantoanfinal.repository.RoleRepository;
 
 @SpringBootApplication
-
 public class ProjectAnToanFinalApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
@@ -39,8 +38,19 @@ public class ProjectAnToanFinalApplication implements CommandLineRunner {
 		Set<Role> roles = new HashSet<>();
 		roles.add(new Role(1,"USER"));
 		user.setRoles(roles);
-		userRepository.save(user);
+//		userRepository.save(user);
 //		roleRepository.save(new Role(1,"USER"));
 		System.out.println(user);
 	}
+
+//	private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
+//			"classpath:/META-INF/resources/", "classpath:/resources/",
+//			"classpath:/static/", "classpath:/public/" };
+//
+//	@Override
+//	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//		registry.addResourceHandler("/**")
+//				.addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
+//	}
+	
 }
