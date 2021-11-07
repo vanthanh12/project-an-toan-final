@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <title>Hello</title>
-</head>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/_layout">
+<head th:replace="fragments/head :: head(titleText='Home')"></head>
 <body>
-<h1>Chỉ những ai đăng nhập mới truy cập được trang này!</h1>
 
-<form th:action="@{/logout}" method="post">
-  <input type="submit" value="Sign Out"/>
-</form>
+<div layout:fragment="content">
+    <h1>Chỉ những ai đăng nhập mới truy cập được trang này!</h1>
+
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+
 
 </body>
 </html>

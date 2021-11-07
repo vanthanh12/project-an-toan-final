@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <title>Spring Security Example</title>
-</head>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/_layout">
+<head th:replace="fragments/head :: head(titleText='Home')"></head>
 <body>
-<h1>Welcome!</h1>
+<div layout:fragment="content">
+    <h1>Welcome!</h1>
 
-<p><a href="/login">login</a></p>
-<p>Click <a href="https://loda.me">here</a> to see a loda homepage.</p>
-
+    <p><a href="/login">login</a></p>
+    <p>Click <a href="https://loda.me">here</a> to see a loda homepage.</p>
+</div>
 </body>
 </html>

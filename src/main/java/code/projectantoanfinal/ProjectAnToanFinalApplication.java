@@ -12,6 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import code.projectantoanfinal.entities.Role;
 import code.projectantoanfinal.entities.User;
 import code.projectantoanfinal.repository.UserRepository;
+import code.projectantoanfinal.repository.RoleRepository;
 
 @SpringBootApplication
 
@@ -23,6 +24,8 @@ public class ProjectAnToanFinalApplication implements CommandLineRunner {
 
 	@Autowired
 	UserRepository userRepository;
+	@Autowired
+	RoleRepository roleRepository;
 	@Autowired
 	PasswordEncoder passwordEncoder;
 
@@ -36,7 +39,8 @@ public class ProjectAnToanFinalApplication implements CommandLineRunner {
 		Set<Role> roles = new HashSet<>();
 		roles.add(new Role(1,"USER"));
 		user.setRoles(roles);
-		// userRepository.save(user);
+		userRepository.save(user);
+//		roleRepository.save(new Role(1,"USER"));
 		System.out.println(user);
 	}
 }
