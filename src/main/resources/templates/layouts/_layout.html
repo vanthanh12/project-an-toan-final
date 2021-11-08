@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!--<head lang="en" th:replace="fragments/head :: head"></head>-->
+<body class="config">
+
+<div class="preloader is-active">
+    <div class="preloader__wrap">
+        <img class="preloader__img" src="images/preloader.png" alt=""></div>
+</div>
+
+<div id="app">
+
+    <div th:replace="fragments/header :: header"></div>
+
+    <div layout:fragment="content"></div>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+</div>
+
+
+<!--====== Vendor Js ======-->
+<script th:src="@{/js/vendor.js}"></script>
+
+<!--====== jQuery Shopnav plugin ======-->
+<script th:src="@{/js/jquery.shopnav.js}"></script>
+
+<!--====== App ======-->
+<script th:src="@{/js/app.js}"></script>
+
+<!--====== Noscript ======-->
+<noscript>
+    <div class="app-setting">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="app-setting__wrap">
+                        <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
+
+                        <span class="app-setting__text">Please enable JavaScript in your browser or upgrade to a JavaScript-capable browser.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</noscript>
+</body>
+</html>
